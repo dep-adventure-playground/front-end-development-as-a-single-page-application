@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>WEB POS | DEP</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+          rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css">
+    <link href="node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css" rel="stylesheet">
     <!-- Theme style -->
-    <link rel="stylesheet" href="node_modules/admin-lte/dist/css/adminlte.css">
+    <link href="node_modules/admin-lte/dist/css/adminlte.css" rel="stylesheet">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link href="node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -31,7 +32,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="/" class="brand-link">
+        <a class="brand-link" href="/">
             <span class="brand-text font-weight-light">WEB POS</span>
         </a>
 
@@ -40,11 +41,11 @@
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" role="menu" data-accordion="false">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-accordion="false" role="menu">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link ">
+                        <a class="nav-link " href="index.html">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
@@ -52,7 +53,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="manage-customers.html" class="nav-link active">
+                        <a class="nav-link active" href="manage-customers.html">
                             <i class="nav-icon fas fa-users"></i>
                             <p>
                                 Manage Customers
@@ -60,7 +61,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="manage-items.html" class="nav-link">
+                        <a class="nav-link" href="manage-items.html">
                             <i class="nav-icon fas fa-list"></i>
                             <p>
                                 Manage Items
@@ -68,7 +69,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="place-orders.html" class="nav-link">
+                        <a class="nav-link" href="place-orders.html">
                             <i class="nav-icon fas fa-cart-plus"></i>
                             <p>
                                 Place Orders
@@ -76,7 +77,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="search-orders.html" class="nav-link">
+                        <a class="nav-link" href="search-orders.html">
                             <i class="nav-icon fas fa-search"></i>
                             <p>
                                 Search Orders
@@ -117,52 +118,61 @@
                 <div class="row">
                     <!--Add Input fields, Search field, and Save and Update buttons-->
                     <form>
-                        <div class="row" >
+                        <div class="row">
                             <!--Add Input fields-->
                             <div class="col-lg-4 col-12">
-                                <label for="customer_id" class="form-label">Customer Id</label>
-                                <input type="text" name="customer_id" class="form-control" id="customer_id" >
+                                <label class="form-label" for="customer_id">Customer Id</label>
+                                <input class="form-control" id="customer_id" name="customer_id" type="text">
                             </div>
                             <div class="col-lg-4 col-12">
-                                <label for="customer_name" class="form-label">Customer Name</label>
-                                <input type="text" name="customer_name" class="form-control" id="customer_name" >
+                                <label class="form-label" for="customer_name">Customer Name</label>
+                                <input class="form-control" id="customer_name" name="customer_name" type="text">
                             </div>
                         </div>
-                        <div class="row" >
+                        <div class="row">
                             <div class="col-lg-4 col-12">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" name="address" class="form-control" id="address" >
+                                <label class="form-label" for="address">Address</label>
+                                <input class="form-control" id="address" name="address" type="text">
                             </div>
                             <div class="col-lg-4 col-12" style="margin-bottom: 30px;">
-                                <label for="salary" class="form-label">Salary</label>
-                                <input type="text" name="salary" class="form-control" id="salary" >
+                                <label class="form-label" for="salary">Salary</label>
+                                <input class="form-control" id="salary" name="salary" type="text">
                             </div>
 
                             <!--Add Search field, and Save and Update buttons-->
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="image_id" class="col-sm-3 col-md-3 col-lg-2 control-label ">Select Image:</label> <div class="col-sm-9 col-md-9 col-lg-10">
-                                    <ul class="list-unstyled avatar-list">
-                                        <li>
-                                            <input type="file" name="image_id" id="image_id" class="filestyle">&nbsp;
-                                        </li>
-                                        <li>
-                                            <div id="avatar"><img style="width: 20%" src="https://demo.phppointofsale.com/assets/img/avatar.png" class="img-polaroid" id="image_empty" alt="" /></div>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    <label class="col-sm-3 col-md-3 col-lg-2 control-label " for="image_id">Select
+                                        Image:</label>
+                                    <div class="col-sm-9 col-md-9 col-lg-10">
+                                        <ul class="list-unstyled avatar-list">
+                                            <li>
+                                                <input class="filestyle" id="image_id" name="image_id" type="file">&nbsp;
+                                            </li>
+                                            <li>
+                                                <div id="avatar"><img alt=""
+                                                                      class="img-polaroid"
+                                                                      id="image_empty" src="https://demo.phppointofsale.com/assets/img/avatar.png" style="width: 20%"/>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                            </div>
-                            <div class="col-12 row search-bar" >
-                                <br><input type="text" class="form-control col-sm-4 col-12" placeholder="Search Here" >&nbsp;&nbsp;
-                                <div class=" save-update button-group col-sm-4 col-12" style="display: inline; width: 40%" >
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>&nbsp;
-                                    <button type="submit" class="btn btn-primary">Save</button>&nbsp;
-                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
+                                <div class="col-12 row search-bar">
+                                    <br><input class="form-control col-sm-4 col-12" placeholder="Search Here"
+                                               type="text">&nbsp;&nbsp;
+                                    <div class=" save-update button-group col-sm-4 col-12"
+                                         style="display: inline; width: 40%">
+                                        <button class="btn btn-outline-secondary" id="button-addon2" type="button">
+                                            Search
+                                        </button>&nbsp;
+                                        <button class="btn btn-primary" type="submit">Save</button>&nbsp;
+                                        <button class="btn btn-primary" type="submit">Update</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                             <!--Add Customer Table-->
                             <br>
@@ -183,7 +193,7 @@
                                     <td>Mark</td>
                                     <td>Kandy</td>
                                     <td>10000</td>
-                                    <td><img src="img/avatar1.png" alt="Avatar" style="width: 45px;height: 45px"></td>
+                                    <td><img alt="Avatar" src="img/avatar1.png" style="width: 45px;height: 45px"></td>
 
                                 </tr>
                                 <tr>
@@ -191,14 +201,14 @@
                                     <td>Jacob</td>
                                     <td>Colombo</td>
                                     <td>20000</td>
-                                    <td><img src="img/avatar1.png" alt="Avatar" style="width: 45px;height: 45px"></td>
+                                    <td><img alt="Avatar" src="img/avatar1.png" style="width: 45px;height: 45px"></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">C003</th>
-                                    <td >Ada</td>
+                                    <td>Ada</td>
                                     <td>Jaffna</td>
                                     <td>30000</td>
-                                    <td><img src="img/avatar2.jpg" alt="Avatar" style="width: 45px;height: 45px"></td>
+                                    <td><img alt="Avatar" src="img/avatar2.jpg" style="width: 45px;height: 45px"></td>
                                 </tr>
                                 </tbody>
                             </table>
