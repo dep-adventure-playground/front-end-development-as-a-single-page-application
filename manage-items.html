@@ -10,7 +10,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="node_modules/admin-lte/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="node_modules/admin-lte/dist/css/adminlte.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 </head>
@@ -90,7 +90,7 @@
         <!-- /.sidebar -->
     </aside>
 
-    <!-- Content Wrapper. Contains page content - First Big Line of Body-->
+    <!-- Content Wrapper. Contains page content with First Big Line of Body-->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -115,53 +115,102 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-lg-4 col-12">
-                        <!-- small box -->
-                        <div class="small-box bg-info">
-                            <div class="inner">
-                                <h3>150</h3>
-
-                                <p>Customers</p>
+                    <!--Add Input fields, Search field, and Save and Update buttons-->
+                    <form>
+                        <div class="row" >
+                            <!--Add Input fields-->
+                            <div class="col-lg-4 col-12">
+                                <label for="item_code" class="form-label">Item Code</label>
+                                <input type="text" name="item_code" class="form-control" id="item_code" >
                             </div>
-                            <div class="icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-4 col-12">
-                        <!-- small box -->
-                        <div class="small-box bg-success">
-                            <div class="inner">
-                                <h3>53</h3>
-
-                                <p>Items</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fas fa-list"></i>
+                            <div class="col-lg-4 col-12">
+                                <label for="description" class="form-label">Description</label>
+                                <input type="text" name="description" class="form-control" id="description" >
                             </div>
                         </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-4 col-12">
-                        <!-- small box -->
-                        <div class="small-box bg-warning">
-                            <div class="inner">
-                                <h3>44</h3>
+                        <div class="row" >
+                            <div class="col-lg-4 col-12">
+                                <label for="unit_price" class="form-label">Unit Price</label>
+                                <input type="text" name="unit_price" class="form-control" id="unit_price" >
+                            </div>
+                            <div class="col-lg-4 col-12" style="margin-bottom: 30px;">
+                                <label for="qtyOnHand" class="form-label">Qty On Hand</label>
+                                <input type="text" name="qtyOnHand" class="form-control" id="qtyOnHand" >
+                            </div>
 
-                                <p>Orders</p>
+                            <!--Add Search field, and Save and Update buttons-->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="image_id" class="col-sm-3 col-md-3 col-lg-2 control-label ">Select Image:</label> <div class="col-sm-9 col-md-9 col-lg-10">
+                                    <ul class="list-unstyled avatar-list">
+                                        <li>
+                                            <input type="file" name="image_id" id="image_id" class="filestyle">&nbsp;
+                                        </li>
+                                        <li>
+                                            <div id="avatar"><img style="width: 20%" src="https://demo.phppointofsale.com/assets/img/avatar.png" class="img-polaroid" id="image_empty" alt="" /></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                </div>
+                                <div class="col-12 row search-bar" >
+                                    <br><input type="text" class="form-control col-sm-4 col-12" placeholder="Search Here" >&nbsp;&nbsp;
+                                    <div class=" save-update button-group col-sm-4 col-12" style="display: inline; width: 40%" >
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>&nbsp;
+                                        <button type="submit" class="btn btn-primary">Save</button>&nbsp;
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="icon">
-                                <i class="fas fa-cart-plus"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ./col -->
+
+                            <!--Add Customer Table-->
+                            <br>
+                            <h2 class="table-title">Customer Detail</h2>
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Item Code</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Qty On Hand</th>
+                                    <th scope="col">Unit Price (LKR)</th>
+                                    <th scope="col">Image</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">I001</th>
+                                    <td>Bread</td>
+                                    <td>40</td>
+                                    <td>60</td>
+                                    <td><img src="img/bread.webp" alt="Avatar" style="width: 45px;height: 45px"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">I002</th>
+                                    <td>Tea Packet</td>
+                                    <td>35</td>
+                                    <td>250</td>
+                                    <td><img src="img/tea-packet.jpg" alt="Avatar" style="width: 45px;height: 45px"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">I003</th>
+                                    <td >Dhal</td>
+                                    <td>20kg</td>
+                                    <td>75</td>
+                                    <td><img src="img/dhal-packet.jpg" alt="Avatar" style="width: 45px;height: 45px"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                    </form>
                 </div>
                 <div class="row"></div>
             </div>
         </section>
     </div>
+
+
+
+
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <strong>Copyright &copy; 2014-2020 <a href="https://ijse.lk">ijse.lk</a>.</strong>
