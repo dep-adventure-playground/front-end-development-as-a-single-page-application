@@ -1,0 +1,121 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Manage Items</h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <!--Add Input fields, Search field, and Save and Update buttons-->
+                <form>
+                    <div class="row">
+                        <!--Add Input fields-->
+                        <div class="col-lg-4 col-12">
+                            <label class="form-label" for="item_code">Item Code</label>
+                            <input class="form-control" id="item_code" name="item_code" type="text">
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <label class="form-label" for="description">Description</label>
+                            <input class="form-control" id="description" name="description" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <label class="form-label" for="unit_price">Unit Price</label>
+                            <input class="form-control" id="unit_price" name="unit_price" type="text">
+                        </div>
+                        <div class="col-lg-4 col-12" style="margin-bottom: 30px;">
+                            <label class="form-label" for="qtyOnHand">Qty On Hand</label>
+                            <input class="form-control" id="qtyOnHand" name="qtyOnHand" type="text">
+                        </div>
+
+                        <!--Add Search field, and Save and Update buttons-->
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-3 col-lg-2 control-label " for="image_id">Select
+                                    Image:</label>
+                                <div class="col-sm-9 col-md-9 col-lg-10">
+                                    <ul class="list-unstyled avatar-list">
+                                        <li>
+                                            <input class="filestyle" id="image_id" name="image_id" type="file">&nbsp;
+                                        </li>
+                                        <li>
+                                            <div id="avatar"><img alt=""
+                                                                  class="img-polaroid"
+                                                                  id="image_empty" src="https://demo.phppointofsale.com/assets/img/avatar.png" style="width: 20%"/>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                            </div>
+                            <div class="col-12 row search-bar">
+                                <br><input class="form-control col-sm-4 col-12" placeholder="Search Here"
+                                           type="text">&nbsp;&nbsp;
+                                <div class=" save-update button-group col-sm-4 col-12"
+                                     style="display: inline; width: 40%">
+                                    <button class="btn btn-outline-secondary" id="button-addon2" type="button">
+                                        Search
+                                    </button>&nbsp;
+                                    <button class="btn btn-primary" type="submit">Save</button>&nbsp;
+                                    <button class="btn btn-primary" type="submit">Update</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Add Customer Table-->
+                        <br>
+                        <h2 class="table-title">Item Details</h2>
+                        <table class="table table-dark table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">Item Code</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Qty On Hand</th>
+                                <th scope="col">Unit Price (LKR)</th>
+                                <th scope="col">Image</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">I001</th>
+                                <td>Bread</td>
+                                <td>40</td>
+                                <td>60</td>
+                                <td><img alt="Avatar" src="../../asset/img/bread.jpg" style="width: 45px;height: 45px"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">I002</th>
+                                <td>Tea Packet</td>
+                                <td>35</td>
+                                <td>250</td>
+                                <td><img alt="Avatar" src="../../asset/img/tea-packet.jpg" style="width: 45px;height: 45px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">I003</th>
+                                <td>Dhal</td>
+                                <td>20kg</td>
+                                <td>75</td>
+                                <td><img alt="Avatar" src="../../asset/img/dhal-packet.jpg" style="width: 45px;height: 45px">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                </form>
+            </div>
+            <div class="row"></div>
+        </div>
+    </section>
+</div>

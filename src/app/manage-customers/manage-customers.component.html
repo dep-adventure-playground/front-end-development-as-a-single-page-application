@@ -1,0 +1,120 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Manage Customers</h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <!--Add Input fields, Search field, and Save and Update buttons-->
+                <form>
+                    <div class="row">
+                        <!--Add Input fields-->
+                        <div class="col-lg-4 col-12">
+                            <label class="form-label" for="customer_id">Customer Id</label>
+                            <input class="form-control" id="customer_id" name="customer_id" type="text">
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <label class="form-label" for="customer_name">Customer Name</label>
+                            <input class="form-control" id="customer_name" name="customer_name" type="text">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <label class="form-label" for="address">Address</label>
+                            <input class="form-control" id="address" name="address" type="text">
+                        </div>
+                        <div class="col-lg-4 col-12" style="margin-bottom: 30px;">
+                            <label class="form-label" for="salary">Salary</label>
+                            <input class="form-control" id="salary" name="salary" type="text">
+                        </div>
+
+                        <!--Add Search field, and Save and Update buttons-->
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-3 col-lg-2 control-label " for="image_id">Select
+                                    Image:</label>
+                                <div class="col-sm-9 col-md-9 col-lg-10">
+                                    <ul class="list-unstyled avatar-list">
+                                        <li>
+                                            <input class="filestyle" id="image_id" name="image_id" type="file">&nbsp;
+                                        </li>
+                                        <li>
+                                            <div id="avatar"><img alt=""
+                                                                  class="img-polaroid"
+                                                                  id="image_empty" src="https://demo.phppointofsale.com/assets/img/avatar.png" style="width: 20%"/>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                            </div>
+                            <div class="col-12 row search-bar">
+                                <br><input class="form-control col-sm-4 col-12" placeholder="Search Here"
+                                           type="text">&nbsp;&nbsp;
+                                <div class=" save-update button-group col-sm-4 col-12"
+                                     style="display: inline; width: 40%">
+                                    <button class="btn btn-outline-secondary" id="button-addon2" type="button">
+                                        Search
+                                    </button>&nbsp;
+                                    <button class="btn btn-primary" type="submit">Save</button>&nbsp;
+                                    <button class="btn btn-primary" type="submit">Update</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Add Customer Table-->
+                        <br>
+                        <h2 class="table-title">Customer Detail</h2>
+                        <table class="table table-dark table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">Customer Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Salary</th>
+                                <th scope="col">Profile</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">C001</th>
+                                <td>Mark</td>
+                                <td>Kandy</td>
+                                <td>10000</td>
+                                <td><img alt="Avatar" src="../../asset/img/avatar1.png" style="width: 45px;height: 45px"></td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">C002</th>
+                                <td>Jacob</td>
+                                <td>Colombo</td>
+                                <td>20000</td>
+                                <td><img alt="Avatar" src="../../asset/img/avatar1.png" style="width: 45px;height: 45px"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">C003</th>
+                                <td>Ada</td>
+                                <td>Jaffna</td>
+                                <td>30000</td>
+                                <td><img alt="Avatar" src="../../asset/img/avatar2.jpg" style="width: 45px;height: 45px"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                </form>
+            </div>
+            <div class="row"></div>
+        </div>
+    </section>
+</div>
